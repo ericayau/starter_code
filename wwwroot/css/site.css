@@ -17,3 +17,7 @@ html {
 body {
     margin-bottom: 60px;
 }
+
+.infoSectionContainer {
+    border: 2px solid;
+}
