@@ -1,18 +1,28 @@
-function buildCard(id, title, imageUrl) {
-return `
-<div class="card bg-base-100 w-96 shadow-sm">
-<figure>
-<img src="${imageUrl}" alt="${title}" />
-</figure>
-<div class="card-body">
-<h2 class="card-title">${title}</h2>
-</div>
-</div> 
-`;
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-const pictureone = 'image';
-const mypicture = '';
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-const mycardhtml = buildCard(1, 'Sample Title', pictureone);
-document.getElementById('card-container').innerHTML = mycardhtml;
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
