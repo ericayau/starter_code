@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link
-        href="https://cdn.jsdelivr.net/npm/daisyui@5"
-        rel="stylesheet"
-        type="text/css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link href="/css/site.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
     <title>Event App</title>
 </head>
 
-<body class="bg-[#f5f3f0]">
+<body>
 
-<!-- Hero Section -->
-<div class="hero min-h-screen bg-[linear-gradient(135deg,#6b8e6f_0%,#5a7a8c_100%)]">
-    <div class="hero-content text-center">
-        <div class="max-w-md mb-4">
-            <h1 class="text-5xl font-bold text-white">Welcome to Event App</h1>
-            <p class="py-6 text-white/90 text-lg">
-                Discover, create, and manage amazing events. Join thousands of users who trust our platform
-                for seamless event planning and coordination.
-            </p>
-            <button class="btn btn-lg rounded-full min-w-[300px] text-white bg-[#8b7355] border-[#8b7355]">
-                Get Started
-            </button>
+<!-- NAVBAR -->
+<nav class="nav">
+    <div class="nav-logo">Event App</div>
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Discover Events That Inspire</h1>
+        <p>Explore upcoming events, plan your own, and stay connected.</p>
+
+        <div class="hero-buttons">
+            <button id="btn-events" class="btn-primary">View Events</button>
+            <button id="btn-learn" class="btn-secondary">Learn More</button>
         </div>
     </div>
-</div>
 
-<!-- Info Section -->
-<section class="container mx-auto px-4 py-16">
-    <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4 text-[#6b8e6f]">Why Choose Event App?</h2>
-        <p class="text-lg text-gray-600">Everything you need to manage events efficiently</p>
+    <!-- IMAGE SLOT (you replace with your own images) -->
+    <div class="hero-image">
+        <img src="/images/example.jpg" alt="Event Preview">
     </div>
+</section>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- FEATURES SECTION -->
+<section class="features">
+    <h2>Why Use Event App?</h2>
+    <div class="feature-grid">
 
-        <!-- Card 1 -->
-        <div class="card bg-base-100 shadow-lg border-2 border-[#6b8e6f]">
-            <div class="card-body items-center text-center">
-                <h3 class="card-title text-[#6b8e6f]">Easy to Use</h3>
-                <p>Intuitive interface designed for everyone</p>
-            </div>
+        <div class="feature-card">
+            <h3>Easy to Use</h3>
+            <p>Simple, clean interface for all users.</p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="card bg-base-100 shadow-lg border-2 border-[#8b7355]">
-            <div class="card-body items-center text-center">
-                <h3 class="card-title text-[#8b7355]">Powerful Features</h3>
-                <p>All the tools you need in one place</p>
-            </div>
+        <div class="feature-card">
+            <h3>Powerful Tools</h3>
+            <p>Create, manage, and share events effortlessly.</p>
         </div>
 
-        <!-- Card 3 -->
-        <div class="card bg-base-100 shadow-lg border-2 border-[#5a7a8c]">
-            <div class="card-body items-center text-center">
-                <h3 class="card-title text-[#5a7a8c]">24/7 Support</h3>
-                <p>We're here to help whenever you need us</p>
-            </div>
+        <div class="feature-card">
+            <h3>Fully Responsive</h3>
+            <p>Works perfectly on all devices.</p>
         </div>
 
     </div>
 </section>
 
-<script src="/js/site.js"></script>
+<script src="/js/main.js"></script>
+
 </body>
 </html>
