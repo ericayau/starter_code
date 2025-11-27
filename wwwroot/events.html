@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width", initial-scale=1.0" name="viewport"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Events | Studentsnooze Network</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet"/>
+</head>
+<body class="bg-base-100 text-base-content">
 
-  
-    <link
-     href = "https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <!-- Navbar -->
+  <nav class="navbar bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold text-primary">Studentsnooze Network</a>
+      <ul class="menu menu-horizontal space-x-4">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html" class="font-semibold">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<script src = "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-6">
 
-<title> EVENTS PAGE </title>
+    <!-- Newsboard Sidebar -->
+    <aside class="w-full md:w-1/4 bg-base-200 p-4 rounded-lg shadow sticky top-24">
+      <h3 class="text-primary text-lg font-semibold mb-2">📰 Newsboard</h3>
+      <p><strong>Event of the Week:</strong></p>
+      <p>Climbing Trip to Mount Brantham with the Lincoln Students' Hiking Club</p>
+      <a href="#highlight" class="link link-primary mt-2 inline-block">Learn More →</a>
+    </aside>
 
-    </head>
+    <!-- Events Content -->
+    <main class="flex-1 bg-white p-6 rounded-lg shadow">
 
-<body>
-    <!-- Info Section -->
-    <section class="container mx-auto px-4 py-8">
-      <div id="dynamic-content" class="mb-[200px] flex flex-wrap gap-8"></div>
+      <h1 class="text-3xl font-bold text-primary text-center mb-6">Events on:</h1>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="card bg-base-100 border border-gray-200 shadow">
-          <div class="card-body items-center text-center">
-            <h3 class="card-title">Easy to Use</h3>
-            <p>Intuitive interface designed for everyone</p>
+      <!-- Highlight Image -->
+      <div id="highlight" class="mb-8">
+        <img src="image.jpg" alt="Weekly Event Highlight" class="w-full rounded-lg shadow" />
+      </div>
+
+      <!-- Category Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <button class="btn btn-primary" data-target="sports">Sports</button>
+        <button class="btn btn-primary" data-target="socials">Social</button>
+        <button class="btn btn-primary" data-target="professional">Professional</button>
+        <button class="btn btn-primary" data-target="other">Other</button>
+      </div>
+
+      <!-- Sports Events -->
+      <section id="sports" class="space-y-4 mb-8">
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🏅 Sports Events</h2>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">University Football League</h4>
+            <p>Stadium Field — Nov 30, 2025</p>
           </div>
         </div>
-
-        <div class="card bg-base-100 border border-gray-200 shadow">
-          <div class="card-body items-center text-center">
-            <h3 class="card-title">Powerful Features</h3>
-            <p>All the tools you need in one place</p>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">Basketball Championship</h4>
+            <p>Sports Hall — Dec 3, 2025</p>
           </div>
         </div>
+      </section>
 
-        <div class="card bg-base-100 border border-gray-200 shadow">
-          <div class="card-body items-center text-center">
-            <h3 class="card-title">24/7 Support</h3>
-            <p>We're here to help whenever you need us</p>
+      <!-- Social Events -->
+      <section id="socials" class="space-y-4 mb-8">
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🎉 Social Events</h2>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">Wine and Cheese Evening</h4>
+            <p>Student Lounge — Dec 5, 2025</p>
           </div>
         </div>
-      </div>
-    </section>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">Comedy Night</h4>
+            <p>Campus Theatre — Dec 8, 2025</p>
+          </div>
+        </div>
+      </section>
 
+      <!-- Professional Events -->
+      <section id="professional" class="space-y-4 mb-8">
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">💼 Professional Events</h2>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">Tech Networking Mixer</h4>
+            <p>Innovation Hub — Dec 10, 2025</p>
+          </div>
+        </div>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">LinkedIn Masterclass</h4>
+            <p>Library Conference Room — Dec 12, 2025</p>
+          </div>
+        </div>
+      </section>
 
-    <div class="slideshowcontainer">
+      <!-- Other Events -->
+      <section id="other" class="space-y-4 mb-8">
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🌱 Other Events</h2>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+            <h4 class="card-title">Sober Social — Game Night</h4>
+            <p>Community Centre — Dec 14, 2025</p>
+          </div>
+        </div>
+      </section>
 
-      <div class="mySlides fade">
-        <div class= "numbertext">1/3</div>
-        <img src="campingtrip.jpg" style="width:100%">
-        <div class="text">Students at the bar crawl</div>
-      </div>
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="bananaclubslideshowpic.jpg" style="width:100%">
-        <div class="text">Caption Two</div>
-      </div>
-    
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="goatyogaslideshowpic.jpg" style="width:100%">
-        <div class="text">Caption Three</div>
-      </div>
-    
-      <!-- Next and previous buttons -->
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br>
-    
-    <!-- The dots/circles -->
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-    </div>
+    </main>
 
-    <script src="events.js"></script>
-  </body>
-</ html>
+  </div>
+
+  <footer class="footer footer-center p-4 bg-primary text-primary-content">
+    <p>&copy; 2025 Studentsnooze Network | Connecting Students, Building Community</p>
+  </footer>
+
+  <script>
+    // Scroll to section when category button clicked
+    document.querySelectorAll('button[data-target]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Click event card → detail page
+    function goDetail() {
+      window.location.href = 'event-detail.html';
+    }
+  </script>
+</body>
+</html>
