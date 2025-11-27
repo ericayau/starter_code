@@ -1,70 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/site.css">
-
-    <title>Event App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentsnooze Network</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Studentsnooze Network</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- NAVBAR -->
-<nav class="nav">
-    <div class="nav-logo">Event App</div>
-    <div class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-        <a href="admin.html">Admin</a>
-    </div>
-</nav>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Weekly Events</h3>
+            <ul>
+                <li>Puppy Yoga</li>
+                <li>Wine & Cheese Tasting</li>
+                <li>Tech Networking</li>
+                <li>Open Mic Night</li>
+                <li>Trivia Thursdays</li>
+            </ul>
+        </aside>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Discover Events That Inspire</h1>
-        <p>Explore upcoming events, plan your own, and stay connected.</p>
+        <!-- Main Editable Section -->
+        <section class="main-content">
+            <h1>Make it happen!</h1>
+            <textarea id="editableText" placeholder="Write something inspiring..."></textarea>
+        </section>
+    </main>
 
-        <div class="hero-buttons">
-            <button id="btn-events" class="btn-primary">View Events</button>
-            <button id="btn-learn" class="btn-secondary">Learn More</button>
+    <!-- Image Carousel -->
+    <section class="carousel-container">
+        <button class="arrow left">&#10094;</button>
+        <div class="carousel">
+            <img src="image.jpg" alt="Event 1" onclick="redirectToEvents()">
+            <img src="image1.jpg" alt="Event 2" onclick="redirectToEvents()">
+            <img src="image2.jpg" alt="Event 3" onclick="redirectToEvents()">
+            <img src="image3.jpg" alt="Event 4" onclick="redirectToEvents()">
+            <img src="image4.jpg" alt="Event 5" onclick="redirectToEvents()">
         </div>
-    </div>
+        <button class="arrow right">&#10095;</button>
+    </section>
 
-    <!-- IMAGE SLOT (you replace with your own images) -->
-    <div class="hero-image">
-        <img src="/images/example.jpg" alt="Event Preview">
-    </div>
-</section>
+    <footer>
+        <p>&copy; 2025 Studentsnooze Network | Bringing Students Together</p>
+    </footer>
 
-<!-- FEATURES SECTION -->
-<section class="features">
-    <h2>Why Use Event App?</h2>
-    <div class="feature-grid">
-
-        <div class="feature-card">
-            <h3>Easy to Use</h3>
-            <p>Simple, clean interface for all users.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Powerful Tools</h3>
-            <p>Create, manage, and share events effortlessly.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Fully Responsive</h3>
-            <p>Works perfectly on all devices.</p>
-        </div>
-
-    </div>
-</section>
-
-<script src="/js/main.js"></script>
-
+    <script src="index.js"></script>
 </body>
 </html>
