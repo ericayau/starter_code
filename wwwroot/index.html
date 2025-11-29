@@ -1,61 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studentsnooze Network</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studentsnewz Network</title>
+
+  <!-- Tailwind + DaisyUI via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      daisyui: { themes: ["light"] }
+    };
+  </script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">Studentsnooze Network</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="admin.html">Admin</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <h3>Weekly Events</h3>
-            <ul>
-                <li>Puppy Yoga</li>
-                <li>Wine & Cheese Tasting</li>
-                <li>Tech Networking</li>
-                <li>Open Mic Night</li>
-                <li>Trivia Thursdays</li>
-            </ul>
-        </aside>
+<body class="bg-base-100 text-base-content min-h-screen flex flex-col">
 
-        <!-- Main Editable Section -->
-        <section class="main-content">
-            <h1>Make it happen!</h1>
-            <textarea id="editableText" placeholder="Write something inspiring..."></textarea>
-        </section>
-    </main>
+  <!-- Navbar -->
+  <nav class="navbar bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <a href="index.html" class="text-xl font-bold text-primary">Studentsnewstwork</a>
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html" class="font-semibold text-primary">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Image Carousel -->
-    <section class="carousel-container">
-        <button class="arrow left">&#10094;</button>
-        <div class="carousel">
-            <img src="image.jpg" alt="Event 1" onclick="redirectToEvents()">
-            <img src="image1.jpg" alt="Event 2" onclick="redirectToEvents()">
-            <img src="image2.jpg" alt="Event 3" onclick="redirectToEvents()">
-            <img src="image3.jpg" alt="Event 4" onclick="redirectToEvents()">
-            <img src="image4.jpg" alt="Event 5" onclick="redirectToEvents()">
-        </div>
-        <button class="arrow right">&#10095;</button>
+  <!-- Main Content Area -->
+  <main class="container mx-auto flex flex-col lg:flex-row px-4 py-8 gap-6 flex-grow">
+
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-1/4 bg-base-200 rounded-lg shadow-md p-4 h-fit">
+      <h3 class="text-lg font-semibold text-primary mb-3">Weekly Events:</h3>
+      <ul class="list-disc list-inside space-y-2 text-sm">
+        <li>Puppy Yoga</li>
+        <li>Wine & Cheese Tasting</li>
+        <li>Tech Networking</li>
+        <li>Board Game Night</li>
+        <li>Trivia Thursdays</li>
+      </ul>
+    </aside>
+
+    <!-- Main Panel -->
+    <section class="flex-1 bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <h1 class="text-4xl font-extrabold text-primary mb-4">Make it happen!</h1>
+      <textarea id="editableText"
+        class="textarea textarea-bordered w-full h-40 resize-y mb-4"
+        placeholder="(text here)">
+      </textarea>
     </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Studentsnooze Network | Bringing Students Together</p>
-    </footer>
+  <!-- 🎠 Carousel -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="text-center mb-4">
+      <h2 class="text-2xl font-semibold text-primary">Discover More Events</h2>
+      <p class="text-sm text-gray-500">Loneliness isn't real here! Join an activity!</p>
+    </div>
 
-    <script src="index.js"></script>
+    <div class="carousel w-full rounded-lg shadow-lg">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="bananaclubslideshowpic.jpg" class="w-full object-cover cursor-pointer" onclick="redirectToEvents()" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide5" class="btn btn-circle">❮</a>
+         
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="campingtrip.jpg" class="w-full object-cover cursor-pointer" onclick="redirectToEvents()" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="goatyogaslideshowpic.jpg" class="w-full object-cover cursor-pointer" onclick="redirectToEvents()" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="sobersocial.jpg" class="w-full object-cover cursor-pointer" onclick="redirectToEvents()" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide5" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide5" class="carousel-item relative w-full">
+        <img src="networkingnight.jpg" class="w-full object-cover cursor-pointer" onclick="redirectToEvents()" />
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <footer class="footer footer-center p-4 bg-primary text-primary-content mt-auto">
+    <p>&copy; 2025 Studentsnooze Network | Bringing Students Together</p>
+  </footer>
+
+  <!-- function to redirect to events js -->
+  <script>
+    function redirectToEvents() {
+      window.location.href = "events.html";
+    }
+
+    const textArea = document.getElementById('editableText');
+    textArea.addEventListener('input', () => {
+      localStorage.setItem('editableText', textArea.value);
+    });
+
+    window.addEventListener('load', () => {
+      const saved = localStorage.getItem('editableText');
+      if (saved) textArea.value = saved;
+    });
+  </script>
 </body>
 </html>

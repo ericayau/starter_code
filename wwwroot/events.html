@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Events | Studentsnooze Network</title>
+  <title>Events | Studentsnewz Network</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet"/>
 </head>
@@ -26,20 +26,23 @@
 
     <!-- Newsboard Sidebar -->
     <aside class="w-full md:w-1/4 bg-base-200 p-4 rounded-lg shadow sticky top-24">
-      <h3 class="text-primary text-lg font-semibold mb-2">📰 Newsboard</h3>
+      <h3 class="text-primary text-lg font-semibold mb-2"> Newsboard</h3>
       <p><strong>Event of the Week:</strong></p>
       <p>Climbing Trip to Mount Brantham with the Lincoln Students' Hiking Club</p>
       <a href="#highlight" class="link link-primary mt-2 inline-block">Learn More →</a>
     </aside>
 
     <!-- Events Content -->
-    <main class="flex-1 bg-white p-6 rounded-lg shadow">
+    <main class="flex-1 bg-white p-8 rounded-lg shadow">
 
       <h1 class="text-3xl font-bold text-primary text-center mb-6">Events on:</h1>
+      <div class="card card-compact bg-base-200 shadow-lg cursor-pointer">
+        <div class="card-body">
+          <h4 class="card-title">yghjyhgfgthy</h4>
 
       <!-- Highlight Image -->
       <div id="highlight" class="mb-8">
-        <img src="image.jpg" alt="Weekly Event Highlight" class="w-full rounded-lg shadow" />
+        <img src="eventspagefrontpic.jpg" alt="Weekly Event Highlight" class="w-full rounded-lg shadow" />
       </div>
 
       <!-- Category Buttons -->
@@ -52,7 +55,7 @@
 
       <!-- Sports Events -->
       <section id="sports" class="space-y-4 mb-8">
-        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🏅 Sports Events</h2>
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4"> Sports Events</h2>
         <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
           <div class="card-body">
             <h4 class="card-title">University Football League</h4>
@@ -69,7 +72,7 @@
 
       <!-- Social Events -->
       <section id="socials" class="space-y-4 mb-8">
-        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🎉 Social Events</h2>
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4"> Social Events</h2>
         <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
           <div class="card-body">
             <h4 class="card-title">Wine and Cheese Evening</h4>
@@ -82,11 +85,18 @@
             <p>Campus Theatre — Dec 8, 2025</p>
           </div>
         </div>
+        <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
+          <div class="card-body">
+           <h4 class="card-title">Thrifting Crawl with Fashion Society</h4>
+            <p>Jenna's Vintage Apparel - Dec 12, 2025</p>
+         </div>
+        </div>
+
       </section>
 
       <!-- Professional Events -->
       <section id="professional" class="space-y-4 mb-8">
-        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">💼 Professional Events</h2>
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4"> Professional Events</h2>
         <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
           <div class="card-body">
             <h4 class="card-title">Tech Networking Mixer</h4>
@@ -103,7 +113,7 @@
 
       <!-- Other Events -->
       <section id="other" class="space-y-4 mb-8">
-        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4">🌱 Other Events</h2>
+        <h2 class="text-2xl font-bold text-primary border-b-2 border-primary pb-2 mb-4"> Other Events</h2>
         <div class="card card-compact bg-base-200 shadow-lg cursor-pointer" onclick="goDetail()">
           <div class="card-body">
             <h4 class="card-title">Sober Social — Game Night</h4>

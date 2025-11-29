@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HrSijLDQlQA=",
+  "dgSpecHash": "KFjwQjtVx/w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\9600X\\OneDrive\\Desktop\\thisshit\\starter_code\\starter_code.csproj",
+  "projectFilePath": "C:\\Users\\9600X\\OneDrive\\newone\\starter_code\\starter_code.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\9600X\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\9600X\\.nuget\\packages\\dapper-querybuilder\\2.0.0\\dapper-querybuilder.2.0.0.nupkg.sha512",

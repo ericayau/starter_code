@@ -704,11 +704,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\9600X\\OneDrive\\Desktop\\thisshit\\starter_code\\starter_code.csproj",
+      "projectUniqueName": "C:\\Users\\9600X\\OneDrive\\newone\\starter_code\\starter_code.csproj",
       "projectName": "starter_code",
-      "projectPath": "C:\\Users\\9600X\\OneDrive\\Desktop\\thisshit\\starter_code\\starter_code.csproj",
+      "projectPath": "C:\\Users\\9600X\\OneDrive\\newone\\starter_code\\starter_code.csproj",
       "packagesPath": "C:\\Users\\9600X\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\9600X\\OneDrive\\Desktop\\thisshit\\starter_code\\obj\\",
+      "outputPath": "C:\\Users\\9600X\\OneDrive\\newone\\starter_code\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\9600X\\AppData\\Roaming\\NuGet\\NuGet.Config"
